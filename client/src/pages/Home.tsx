@@ -1,6 +1,7 @@
 import { LeadForm } from "@/components/LeadForm";
 import { BookOpen, MapPin, Award, Users, ChevronRight, CheckCircle2 } from "lucide-react";
 import { motion } from "framer-motion";
+import profilePic from "@assets/PKJ_profile_pic_1771634929977.jpg";
 
 export default function Home() {
   return (
@@ -14,6 +15,7 @@ export default function Home() {
             <span className="text-xl font-display font-bold text-slate-900">Jha Tutorials</span>
           </div>
           <div className="hidden md:flex items-center gap-8 text-sm font-medium text-slate-600">
+            <a href="#about-teacher" className="hover:text-primary transition-colors">The Teacher</a>
             <a href="#about" className="hover:text-primary transition-colors">About</a>
             <a href="#features" className="hover:text-primary transition-colors">Why Us</a>
             <a href="#contact" className="hover:text-primary transition-colors">Contact</a>
@@ -157,6 +159,62 @@ export default function Home() {
                 Conveniently located in Sector 4, Bokaro Steel City. Safe and accessible learning environment for all students.
               </p>
             </div>
+          </div>
+        </div>
+      </section>
+
+      {/* About the Teacher Section */}
+      <section id="about-teacher" className="py-24 bg-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid lg:grid-cols-2 gap-16 items-center">
+            <motion.div
+              initial={{ opacity: 0, scale: 0.95 }}
+              whileInView={{ opacity: 1, scale: 1 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6 }}
+              className="relative"
+            >
+              <div className="aspect-[4/5] rounded-2xl overflow-hidden shadow-2xl border-8 border-white">
+                <img 
+                  src={profilePic} 
+                  alt="Prasoon Jha" 
+                  className="w-full h-full object-cover"
+                />
+              </div>
+              <div className="absolute -bottom-6 -right-6 bg-primary text-white p-6 rounded-2xl shadow-xl">
+                <p className="text-2xl font-bold">10+ Years</p>
+                <p className="text-sm opacity-90">Teaching Excellence</p>
+              </div>
+            </motion.div>
+
+            <motion.div
+              initial={{ opacity: 0, x: 20 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6 }}
+            >
+              <h2 className="text-3xl md:text-4xl font-display font-bold text-slate-900 mb-6">
+                Meet Your Mentor: <span className="text-primary">Prasoon Jha</span>
+              </h2>
+              <div className="space-y-4 text-slate-600 text-lg leading-relaxed">
+                <p>
+                  With over a decade of experience in teaching Mathematics, Prasoon Jha has helped hundreds of students in Bokaro Steel City overcome their fear of numbers and excel in their board exams.
+                </p>
+                <p>
+                  His teaching philosophy centers on "Conceptual Mastery" rather than just solving problems. He believes that once a student understands the 'Why' behind a mathematical concept, the 'How' becomes second nature.
+                </p>
+                <div className="pt-6 grid grid-cols-2 gap-4">
+                  <div className="p-4 rounded-xl bg-slate-50 border border-slate-100">
+                    <p className="font-bold text-slate-900">Expertise</p>
+                    <p className="text-sm">Grade 9 Mathematics</p>
+                  </div>
+                  <div className="p-4 rounded-xl bg-slate-50 border border-slate-100">
+                    <p className="font-bold text-slate-900">Focus</p>
+                    <p className="text-sm">CBSE Specialists</p>
+                  </div>
+                </div>
+              </div>
+            </motion.div>
           </div>
         </div>
       </section>
