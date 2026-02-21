@@ -201,6 +201,9 @@ export default function Home() {
                   With over a decade of experience in teaching Mathematics, Prasoon Jha has helped hundreds of students in Bokaro Steel City overcome their fear of numbers and excel in their board exams.
                 </p>
                 <p>
+                  A distinguished academician, he was the <strong>IIT JEE topper from Bokaro Steel City in 1993</strong>, bringing top-tier problem-solving expertise to his students.
+                </p>
+                <p>
                   His teaching philosophy centers on "Conceptual Mastery" rather than just solving problems. He believes that once a student understands the 'Why' behind a mathematical concept, the 'How' becomes second nature.
                 </p>
                 <div className="pt-6 grid grid-cols-2 gap-4">
